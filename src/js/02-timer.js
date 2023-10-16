@@ -74,22 +74,23 @@ function convertMs(ms) {
 }
 
 function timerInterface(obj) {
-  timer.days.textContent = obj.days
-  timer.hours.textContent = obj.hours
-  timer.minutes.textContent = obj.minutes
-  timer.seconds.textContent = obj.seconds
+
+
+  timer.days.textContent = addLeadingZero(obj.days)
+  timer.hours.textContent = addLeadingZero(obj.hours)
+  timer.minutes.textContent = addLeadingZero(obj.minutes)
+  timer.seconds.textContent = addLeadingZero(obj.seconds)
 }
 
-// function onClickToStart(time) {
-        
-//   const intervalId = setInterval(() => {
-//     if (time < 2000) {
-//       alert("Please choose a date in the future");
-//       clearInterval(intervalId)
-//     }
-//     time -= 1000
-//     timerTime(convertMs(time))
-    
-//       }, 1000)
-// }
+function addLeadingZero(value) {
+  return String(value).padStart(2, "0");
+
+}
+
+
+
+
+
+
+
 
